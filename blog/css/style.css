@@ -1,0 +1,314 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* IMPORTED FONTS */
+
+@font-face {
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roz";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+    font-family: "jose";
+    src: url('../fonts/serif/josefinslab-regular.ttf') format('truetype');
+    font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+    font-family: "mont";
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+   font-style: normal;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+p {
+    font-family: roboto, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: lato, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+
+aside h3 {
+    font-size: 1rem;
+}
+
+aside p {
+        font-size: .75rem;
+}
+
+.expand {
+    display: flex;
+    padding: .25rem 0 .5rem 0;
+    font-size: .25rem;
+}
+
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-4deg);
+    text-shadow: 1px 1px 2px #1f315a;
+    color:#A66641
+}
+
+.credit {
+    text-align: right;
+    text-decoration: none;
+}
+
+.highlight {
+    display: inline-block;
+    font-family: roz, Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    text-shadow: 3px 1px 5px #1f315a;
+    letter-spacing: 0.25rem;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #f0eeee;
+    background-color: #b84f34;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+/* ===== GENERAL SETUP AND DEFAULTS ===== */
+/* some margin and spacing for general setup */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+    background: #D9D9D9;
+}
+
+
+
+
+/* ===== LAYOUT ===== */
+
+header {
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+
+nav {
+    margin-top: 3rem;
+}
+
+main {
+    padding: 2rem;
+}
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #1f315a;
+    padding-left: 0.75rem;
+}
+
+aside p {
+    border-bottom: 1px solid #1f315a;
+    padding-bottom: 0.5rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+/* ===== IMAGES AND FIGURES ===== */
+
+img {
+    width: 100%;
+
+}
+
+figure {
+    margin:0px;
+    /* border: solid 2px #b84f34;*/
+}
+
+.article-image {
+    width: 37%;
+    float: left;
+    margin: 1.75rem 0.75rem 1rem 0rem;
+}
+
+.subsection {
+    margin: 1rem 0rem;
+    }
+
+.subsection figure {
+    margin: 0rem 00.25rem;
+    background: #A66641;
+    font-family: roz, Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+}
+
+/* ===== LINKS AND NAVIGATION ===== */
+
+
+
+/* -- Link Styling -- */
+
+
+
+nav {
+    border-top: 1px solid #1f315a;
+    border-bottom: 1px solid #1f315a;
+    margin-bottom: .75rem;
+}
+
+nav a:active, a:focus, a:hover {
+    text-transform: uppercase ;
+    text-decoration: line-through;
+    color: #732C2C;
+    transform: rotate(4deg);
+}
+
+nav a:link, a:visited {
+    color: #33658A;
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: mont, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #1f315a;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color:#732C2C;
+
+ 
+}
+
+footer a:active, :link, a:visited, a:focus, a:hover {
+    color: #8a7333;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration: none;
+}
+
+button {
+    display: inline-block;
+    font-family: ultra, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.33rem;
+    text-transform: uppercase;
+    text-shadow: 3px 1px 5px #1f315a;
+    margin: 2.25rem 0rem;
+    
+    border: 1px solid #1f315a;
+    padding: 1rem 2rem;
+    border-radius: .85rem;
+    
+    color: #f0eeee;
+    background-color: #b84f34;
+    box-shadow: 2px 5px 4px -1px rgb(92, 92, 92);
+}
+/*  TO DO */
+/* elipsices size down */
+/* Aside headers sized down */
+/* sudo classes for nav links */
