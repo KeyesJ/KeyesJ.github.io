@@ -172,6 +172,7 @@ body {
 
 header {
     padding: 0.5rem 0rem 1rem 0rem;
+    text-align: center;
 }
 
 nav {
@@ -234,19 +235,25 @@ figure {
 .subsection figure {
     margin: 0rem 00.25rem;
     background: #A66641;
-    font-family: roz, Arial, Helvetica, sans-serif;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: .85rem;
     color: rgb(255, 255, 255);
 }
 
 .subsection figure figcaption {
     padding: 0.5rem 0.5rem;
+    text-align: center;
+
+
 }
 
 /* ===== LINKS AND NAVIGATION ===== */
 
+a {
+    text-decoration: none;
+}
 
-
-/* -- Link Styling -- */
+/* -- Link Styling -- REMOVING IMPORTANT WILL MAKE STUFF NOT WORK, BUT HAVING IT MAKES ALL LINKS REACT TO SEUDO CLASSES */
 
 
 
@@ -256,14 +263,14 @@ nav {
     margin-bottom: .75rem;
 }
 
-nav a:active, a:focus, a:hover {
-    text-transform: uppercase !important;
-    text-decoration: line-through !important;
-    color: #732C2C !important;
+nav a:active, nav a:focus, nav a:hover {
+    text-transform: uppercase;
+    text-decoration: line-through;
+    color: #732C2C;
     transform: rotate(4deg);
 }
 
-nav a:link, a:visited {
+nav nav a:link, nav a:visited {
     color: #33658A;
     text-decoration: none;
 }
